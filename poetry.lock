@@ -2142,6 +2142,22 @@ timezone = ["pytz (>=2024.2)"]
 xml = ["lxml (>=5.3.0)"]
 
 [[package]]
+name = "pandas-flavor"
+version = "0.8.1"
+description = "The easy way to write your own Pandas flavor"
+optional = false
+python-versions = ">=3.10"
+groups = ["main"]
+files = [
+    {file = "pandas_flavor-0.8.1-py3-none-any.whl", hash = "sha256:6a74c48a7014e27117a164b687c23ca9f7da46c5b198a516ab4ebaa22435292b"},
+    {file = "pandas_flavor-0.8.1.tar.gz", hash = "sha256:255fa5851833ee0132c4fdd6c1565ec1e938a8c2671c37e408006da6b2bdc366"},
+]
+
+[package.dependencies]
+pandas = ">=0.23"
+xarray = "*"
+
+[[package]]
 name = "pandocfilters"
 version = "1.5.1"
 description = "Utilities for writing pandoc filters in python"
@@ -2329,6 +2345,32 @@ mic = ["olefile"]
 test-arrow = ["arro3-compute", "arro3-core", "nanoarrow", "pyarrow"]
 tests = ["check-manifest", "coverage (>=7.4.2)", "defusedxml", "markdown2", "olefile", "packaging", "pyroma (>=5)", "pytest", "pytest-cov", "pytest-timeout", "pytest-xdist", "trove-classifiers (>=2024.10.12)"]
 xmp = ["defusedxml"]
+
+[[package]]
+name = "pingouin"
+version = "0.6.1"
+description = "Pingouin: statistical package for Python"
+optional = false
+python-versions = ">=3.10"
+groups = ["main"]
+files = [
+    {file = "pingouin-0.6.1-py3-none-any.whl", hash = "sha256:514f2897d7ee354723268551147bbc95849ccec83d6f1dddde1395779c6a7b15"},
+    {file = "pingouin-0.6.1.tar.gz", hash = "sha256:df5ac1f057ef257c07cf0e0785ac8fb9ace923ba1b0ef775886914d674a9f63d"},
+]
+
+[package.dependencies]
+matplotlib = "*"
+numpy = ">=1.22.4"
+pandas = ">=2.1.1"
+pandas_flavor = "*"
+scikit-learn = ">=1.2.2"
+scipy = ">=1.10.0"
+seaborn = "*"
+statsmodels = ">=0.14.1"
+tabulate = "*"
+
+[package.extras]
+extras = ["mpmath"]
 
 [[package]]
 name = "platformdirs"
@@ -3660,7 +3702,33 @@ docs = ["Sphinx (>=6.0)", "myst-parser (>=2.0.0)", "sphinx_rtd_theme (>=1.1.0)"]
 optional = ["python-socks", "wsaccel"]
 test = ["pytest", "websockets"]
 
+[[package]]
+name = "xarray"
+version = "2026.2.0"
+description = "N-D labeled arrays and datasets in Python"
+optional = false
+python-versions = ">=3.11"
+groups = ["main"]
+files = [
+    {file = "xarray-2026.2.0-py3-none-any.whl", hash = "sha256:e927d7d716ea71dea78a13417970850a640447d8dd2ceeb65c5687f6373837c9"},
+    {file = "xarray-2026.2.0.tar.gz", hash = "sha256:978b6acb018770554f8fd964af4eb02f9bcc165d4085dbb7326190d92aa74bcf"},
+]
+
+[package.dependencies]
+numpy = ">=1.26"
+packaging = ">=24.1"
+pandas = ">=2.2"
+
+[package.extras]
+accel = ["bottleneck", "flox (>=0.9)", "numba (>=0.62)", "numbagg (>=0.8)", "opt_einsum", "scipy (>=1.13)"]
+complete = ["xarray[accel,etc,io,parallel,viz]"]
+etc = ["sparse (>=0.15)"]
+io = ["cftime", "fsspec", "h5netcdf (>=1.4.0)", "netCDF4 (>=1.6.0)", "pooch", "pydap", "scipy (>=1.13)", "zarr (>=2.18)"]
+parallel = ["dask[complete]"]
+types = ["pandas-stubs", "scipy-stubs", "types-PyYAML", "types-Pygments", "types-colorama", "types-decorator", "types-defusedxml", "types-docutils", "types-networkx", "types-openpyxl", "types-pexpect", "types-psutil", "types-pycurl", "types-python-dateutil", "types-pytz", "types-requests", "types-setuptools"]
+viz = ["cartopy (>=0.23)", "matplotlib (>=3.8)", "nc-time-axis", "seaborn"]
+
 [metadata]
 lock-version = "2.1"
 python-versions = ">=3.13"
-content-hash = "a5c4d5fe102d7cf49a9d9fe04ee916c173c1e79dfe4e4431ec6cda1eacfbeebd"
+content-hash = "f9702d145bb74117040373be316b68dd8270fb6f27478d4897b6210364f7a1e8"
